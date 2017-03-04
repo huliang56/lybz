@@ -282,7 +282,8 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper {positio
 	overflow: hidden;
 }
 .page_container{
-	width: 1140px;
+	width: 100%;
+  min-width: 630px;
 	margin: 0 auto;
 	padding: 15px;
 	color: #fff;
