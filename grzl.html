@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>亳州旅游网-个人资料</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet">	
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-bz">
+		<div class="container-fluid header-width">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle 导航条</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">亳州旅游网</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">
+							首页<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li>
+						<a href="jingdian.html">亳州景点</a>
+					</li>
+					<li>
+						<a href="aboutBozhou.html">关于亳州</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							旅游社区
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="community.html">最新资讯</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">旅游攻略</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left hidden-xs" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="景点名">
+						<span type="submit" class="searchBtn glyphicon glyphicon-search" aria-hidden="true"></span>
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="" data-toggle="modal" data-target="#loginModal">登录</a>
+					</li>
+					<li class="line-cz"></li>
+					<li>
+						<a href="" data-toggle="modal" data-target="#registerModal">注册</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+</header>
+<div class="container">
+<div class="row aboutus-margin">
+	<div class="col-xs-3 col-md-3">
+	  <ul class="nav nav-tabs nav-stacked aboutus-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#grzl" aria-controls="grzl" role="tab" data-toggle="tab">个人资料</a></li>
+	    <li role="presentation"><a href="#txsz" aria-controls="txsz" role="tab" data-toggle="tab">头像设置</a></li>
+	    <li role="presentation"><a href="#xgmm" aria-controls="xgmm" role="tab" data-toggle="tab">修改密码</a></li>
+	    <li role="presentation"><a href="#feedback" aria-controls="feedback" role="tab" data-toggle="tab">意见反馈</a></li>
+	  </ul>
+	</div>
+	<div class="col-xs-9 col-md-9">
+		<div class="tab-content aboutus-content">
+	    <div role="tabpanel" class="tab-pane active" id="grzl">
+		    <div class="tabpanel-title">个人资料</div>
+		    <div class="tabpanel-content">
+		    	<form id="profile">
+		    		<div class="grzl-wrap">
+		    			<label class="label-left" for="email">邮箱</label>
+		    			<div class="grzl-group">
+		    			    <input type="text" name="email" id="email" autocomplete="off" data-validate="email" class="grzl-input" value="" placeholder="请输入邮箱地址">
+		    			</div>
+		    		</div>
+	    	        <div class="grzl-wrap">
+	    	            <label class="label-left">性别</label>
+	    	            <div class="grzl-group">
+	    	                <label><input type="radio" hidefocus="true" value="0" checked="checked" name="sex">保密</label>
+	    	                <label><input type="radio" hidefocus="true" value="1" name="sex">男</label>
+	    	                <label><input type="radio" hidefocus="true" value="2" name="sex">女</label>
+	    	            </div>
+	    	        </div>
+	    	        <div class="grzl-wrap">
+	    	            <label class="label-left" for="aboutme">个性签名</label>
+	    	            <div class="grzl-group">
+	    	                <textarea name="aboutme" id="aboutme" cols="58" rows="5" class="textarea"></textarea>
+	    	            </div>
+	    	        </div>
+	    	        <div class="grzl-wrap">
+	    	            <div class="grzl-group">
+	    	            	<button id="profile-submit" hidefocus="true" class="btn profile-btn">保存</button>
+	    	            </div>
+	    	        </div>
+		    	</form>
+		    </div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="txsz">
+			<div class="tabpanel-title">头像设置</div>
+			<div class="tabpanel-content">
+				
+			</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="xgmm">
+			<div class="tabpanel-title">修改密码</div>
+			<div class="tabpanel-content">
+		    	<form id="changePsw">
+		    		<div class="grzl-wrap">
+		    			<label class="label-left" for="oldpsw">当前密码</label>
+		    			<div class="grzl-group">
+		    			    <input type="text" name="oldpsw" id="oldpsw" autocomplete="off" data-validate="psw" class="grzl-input" value="" placeholder="请输入当前密码">
+		    			</div>
+		    		</div>
+		    		<div class="grzl-wrap">
+		    			<label class="label-left" for="newpsw">新密码</label>
+		    			<div class="grzl-group">
+		    			    <input type="text" name="newpsw" id="newpsw" autocomplete="off" data-validate="newpsw" class="grzl-input" value="" placeholder="请输入密码">
+		    			</div>
+		    		</div>
+		    		<div class="grzl-wrap">
+		    			<label class="label-left" for="confirmpsw">确认密码</label>
+		    			<div class="grzl-group">
+		    			    <input type="text" name="confirmpsw" id="confirmpsw" autocomplete="off" data-validate="confirmpsw" class="grzl-input" value="" placeholder="请输入密码">
+		    			</div>
+		    		</div>
+	    	        <div class="grzl-wrap">
+	    	            <div class="grzl-group">
+	    	            	<button id="psw-submit" hidefocus="true" class="btn profile-btn">保存</button>
+	    	            </div>
+	    	        </div>
+		    	</form>
+			</div>
+	    </div>
+        <div role="tabpanel" class="tab-pane" id="feedback">
+    		<div class="tabpanel-title">意见反馈</div>
+    		<div class="tabpanel-content">
+    			<form id="feedback">
+    				<div class="grzl-wrap">
+    				    <label class="label-left" for="feedback">意见</label>
+    				    <div class="grzl-group">
+    				        <textarea name="feedback" id="feedback" cols="50" rows="5" class="textarea" placeholder="意见写在这里~"></textarea>
+    				    </div>
+    				</div>
+    				<div class="grzl-wrap">
+    				    <label class="label-left" for="feedback">联系方式</label>
+    				    <div class="grzl-group">
+    				        <input type="text" name="feedback" id="feedback" autocomplete="off" data-validate="feedback" class="grzl-input" placeholder="请输入真实的联系方式！">
+    				    </div>
+    				</div>
+    				<div class="grzl-wrap">
+    				    <div class="grzl-group">
+    				    	<button id="feedback-submit" hidefocus="true" class="btn profile-btn">提交</button>
+    				    </div>
+    				</div>
+    			</form>
+    			
+    		</div>
+        </div>
+	  </div>
+	</div>
+</div>
+	<div class="modal fade alert" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">x</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h3 class="modal-title">注册</h3>
+				</div>
+				<div class="modal-body login-content">
+					<form>
+						<div class="form-group">
+							<input type="email" class="form-control" id="user-email" placeholder="请输入登录邮箱"></div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="user-psw" placeholder="6-16位密码，区分大小写，不能用空格"></div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="user-name" placeholder="昵称为2-18位，中英文、数字及下划线"></div>
+						<div class="form-group">
+							<input type="text" class="form-control width50" id="user-verify" placeholder="请输入验证码">
+						</div>
+						<button type="submit" class="btn profile-btn">注册</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer-bz">
+	<div class="container">
+		<div class="footer-left">
+			<ul class="footer-con">
+				<li>
+					<a href="aboutus.html#jianjie" target="_blank">网站简介</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#about-us" target="_blank">关于我们</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#map" target="_blank">网站地图</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#links" target="_blank">友情链接</a>
+				</li>
+			</ul>
+			<div class="copy-footer">
+				<p>Copyright&copy;2015 huliang All Rights Reserved</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<img src="images/logo.png"></div>
+	</div>
+</footer>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

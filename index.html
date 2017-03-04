@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>亳州旅游网-首页</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-bz">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle 导航条</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">亳州旅游网</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="index.html">
+							首页<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li>
+						<a href="jingdian.html">亳州景点</a>
+					</li>
+					<li>
+						<a href="aboutBozhou.html">关于亳州</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							旅游社区
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="community.html">最新资讯</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">旅游攻略</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left hidden-xs step3" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="景点名">
+						<span type="submit" class="searchBtn glyphicon glyphicon-search" aria-hidden="true"></span>
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right step4">
+					<li>
+						<a href="" data-toggle="modal" data-target="#loginModal">登录</a>
+					</li>
+					<li class="line-cz"></li>
+					<li>
+						<a href="" data-toggle="modal" data-target="#registerModal">注册</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+</header>
+<div class="container">
+	<!-- 轮播图 -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="images/changtu/caotengmu.png" alt="曹腾墓">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/chencuanmiao.png" alt="陈传庙">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/huazuan.png" alt="华祖庵">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/huaxilou.png" alt="花戏楼">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/zhuangzici.png" alt="庄子祠">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/yunbingdao.png" alt="曹操运兵道">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/tianjinggong.png" alt="天静宫">
+				<div class="carousel-caption"></div>
+			</div>
+			<div class="item">
+				<img src="images/changtu/wangfota.png" alt="万佛塔">
+				<div class="carousel-caption"></div>
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<h3 class="h3-title">● 热门景点 ●</h3>
+	<div class="row step2">
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank">
+					<img src="images/qc-huaxilou.jpg" alt="花戏楼">
+				</a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">花戏楼</a>
+					<span class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</span>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-caocaogongyuan.jpg" alt="曹操公园"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">曹操公园</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-yunbingdao.jpg" alt="曹操运兵道"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">曹操运兵道</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-huazuan1.jpg" alt="华祖庵"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">华祖庵</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-huaxilou.jpg" alt="花戏楼"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">花戏楼</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-caocaogongyuan.jpg" alt="曹操公园"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">曹操公园</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-yunbingdao.jpg" alt="曹操运兵道"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">曹操运兵道</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<figure class="jingdian-hot">
+				<a href="jingdian-detail.html" target="_blank"><img src="images/qc-huazuan1.jpg" alt="华祖庵"></a>
+				<figcaption class="caption">
+					<a href="jingdian-detail.html" target="_blank">华祖庵</a>
+					<div class="caption-zuobiao">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span>谯城区</span>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+	</div>
+
+	<h3 class="h3-title">● 关于亳州 ●</h3>
+	<div class="row bz-margin1">
+		<div class="hexagon hexagon1">
+			<figure>
+				<a href="aboutBozhou.html" target="_blank" class="hexagon-img"><img src="images/whmr.png"></a>
+				<figcaption>文化名人</figcaption>
+			</figure>
+		</div>
+		<div class="hexagon hexagon2">
+			<figure>
+				<a href="aboutBozhou.html" target="_blank" class="hexagon-img"><img src="images/msmf.png"></a>
+				<figcaption>民俗民风</figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="row bz-margin2 clearfix">
+		<div class="hexagon hexagon3">
+			<figure>
+				<a href="aboutBozhou.html" target="_blank" class="hexagon-img"><img src="images/wwgj.png"></a>
+				<figcaption>文物古迹</figcaption>
+			</figure>
+		</div>
+		<div class="hexagon hexagon4">
+			<figure>
+				<a href="aboutBozhou.html" target="_blank" class="hexagon-img"><img src="images/gybz.png"></a>
+				<figcaption>亳州简介</figcaption>
+			</figure>
+		</div>
+		<div class="hexagon hexagon5">
+			<figure>
+				<a href="aboutBozhou.html" target="_blank" class="hexagon-img"><img src="images/whfy.png"></a>
+				<figcaption>文化非遗</figcaption>
+			</figure>
+		</div>
+	</div>
+
+
+	<h3 class="h3-title">● 旅游社区 ●</h3>
+	<div class="row sq-padding">
+		<div class="col-sm-12 col-md-6">
+			<article class="circle-zx circle-bz">
+				<div class="sq-title">最新资讯</div>
+				<div class="sq-line"></div>
+				<ul class="sq-content">
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">市文物处开展节前文物安全检查</a>
+						<span class="sq-time">2015-09-02</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">国医大师华佗故里论医术</a>
+						<span class="sq-time">2015-08-31</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">亳州：传承华佗学术经验 弘扬华佗医学精神</a>
+						<span class="sq-time">2015-08-31</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">市文化旅游局积极筹备药博会“一对一”接待工作</a>
+						<span class="sq-time">2015-08-28</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">大红灯笼高高挂 喜迎药博会</a>
+						<span class="sq-time">2015-08-27</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">抑制景区门票价格上涨从我做起</a>
+						<span class="sq-time">2015-08-27</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">上海市现代文化旅游促进中心来亳洽谈</a>
+						<span class="sq-time">2015-08-24</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">亳州市区四景点实现无线WIFI全覆盖</a>
+						<span class="sq-time">2015-08-20</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community.html" target="_blank">市博物馆成为暑期孩子“第二课堂”</a>
+						<span class="sq-time">2015-08-13</span>
+					</li>
+				</ul>
+				<a class="sq-more" href="community.html" target="_blank">更多</a>
+			</article>
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<article class="circle-gl circle-bz">
+				<div class="sq-title">旅游攻略</div>
+				<div class="sq-line gl-line"></div>
+				<ul class="sq-content">
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">道家文化观光体验旅游</a>
+						<span class="sq-time">2015-09-02</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">亳州曹操地下运兵道游记</a>
+						<span class="sq-time">2015-08-31</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">沧桑古城楼,悠悠亳州情</a>
+						<span class="sq-time">2015-08-31</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">古都亳州游记</a>
+						<span class="sq-time">2015-08-28</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">自驾游亳州</a>
+						<span class="sq-time">2015-08-27</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">古城亳州游记</a>
+						<span class="sq-time">2015-08-27</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">古城亳州游记</a>
+						<span class="sq-time">2015-08-24</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">古城亳州游记</a>
+						<span class="sq-time">2015-08-20</span>
+					</li>
+					<li>
+						<a class="sq-li" href="community-detail.html" target="_blank">古城亳州游记</a>
+						<span class="sq-time">2015-08-20</span>
+					</li>
+				</ul>
+				<a class="sq-more" href="community.html" target="_blank">更多</a>
+			</article>
+		</div>
+	</div>
+</div>
+<footer class="footer-bz">
+	<div class="container">
+		<div class="footer-left">
+			<ul class="footer-con">
+				<li>
+					<a href="aboutus.html#jianjie" target="_blank">网站简介</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#about-us" target="_blank">关于我们</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#map" target="_blank">网站地图</a>
+				</li>
+				<li>
+					<div class="line-cz"></div>
+				</li>
+				<li>
+					<a href="aboutus.html#links" target="_blank">友情链接</a>
+				</li>
+			</ul>
+			<div class="copy-footer">
+				<p>Copyright&copy;2015 huliang All Rights Reserved</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<img src="images/logo.png"></div>
+	</div>
+</footer>
+
+<div class="modal fade alert" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="lineModalLabel">登录</h3>
+			</div>
+			<div class="modal-body login-content">
+				<form>
+					<div class="form-group">
+						<input type="email" class="form-control" id="user-email" placeholder="请输入登录邮箱"></div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="user-psw" placeholder="请输入密码"></div>
+					<div class="checkbox">
+						<label><input type="checkbox">下次自动登录</label>
+					</div>
+					<button type="submit" class="btn btn-primary center-block">登录</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade alert" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">x</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title">注册</h3>
+			</div>
+			<div class="modal-body login-content">
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" id="user-name" placeholder="请输入用户名"></div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="user-psw" placeholder="6-16位密码，区分大小写，不能用空格"></div>
+					<div class="form-group">
+						<input type="password" class="form-control" id="user-confirmPsw" placeholder="请确认密码"></div>
+					<div class="form-group">
+						<input type="text" class="form-control width50" id="user-verify" placeholder="请输入验证码">
+					</div>
+					<button type="submit" class="btn profile-btn">注册</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="leader-content">
+	<div id="step-1">
+		<h3>欢迎来到亳州旅游网</h3>
+		<p>希望这里的旅游信息会对你的旅程有所帮助，点击下一步了解更多...</p>
+	</div>
+	<div id="step-2">
+		<p>这里有亳州最热景点信息，</p>
+		<p>帮助你快速游遍亳州。</p>
+	</div>
+	<div id="step-3">
+		<p>在此处输入景点名，</p>
+		<p>可快速查找景点信息。</p>
+	</div>
+	<div id="step-4">
+		<p>点击此处注册、登录，</p>
+		<p>开启亳州之旅。</p>
+	</div>
+	<div id="step-5">
+		<p>亳州之美不止于此！</p>
+	</div>
+</div>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.pagewalkthrough.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script>
+            $(function() {
+            	$.cookie("name", 1);
+            	$.cookie("c1", "123", {expires: 7, path: "/", domain: "index.html", secure: false});
+                // 设置参数
+                $('body').pagewalkthrough({
+                    name: 'introduction',
+                    steps: [{
+                            popup: { //定义弹出提示引导层
+                                content: '#step-1',
+                                type: 'modal'
+                            }
+                        }, {
+                            wrapper: '.step2',//当前引导对应的元素位置
+                            popup: {
+                                content: '#step-2',//关联的内容元素
+                                type: 'tooltip',//弹出方式（tooltip和modal以及nohighlight）
+                                position: 'top'//弹出层位置（top,left, right or bottom）
+                            }
+                        }, {
+                            wrapper: '.step3',
+                            popup: {
+                                content: '#step-3',
+                                type: 'tooltip',
+                                position: 'bottom'
+                            }
+                        }, {
+                            wrapper: '.step4',
+                            popup: {
+                                content: '#step-4',
+                                type: 'tooltip',
+                                position: 'left'
+                            }
+                        }, {
+                            wrapper: '.step5',
+                            popup: {
+                                content: '#step-5',
+                                type: 'modal'
+                            }
+                        }]
+                });
+                // 一步一步显示引导页
+                $('body').pagewalkthrough('show');
+            });
+        </script>
+</body>
+</html>

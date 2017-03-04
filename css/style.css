@@ -1,0 +1,977 @@
+body {
+	background-color: #e9ecf1;
+	  font-family: Arial,"Lucida Grande","Microsoft Yahei","Hiragino Sans GB","Hiragino Sans GB W3",SimSun,STHeiti;
+}
+a{color: inherit;}
+a:hover{color: #fff;}
+.hr-dashed {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px dashed #015763;
+}
+.hr-solid {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #015763;
+}
+
+/*引导样式-start*/
+#leader-content{display:none;}
+#jpwClose,
+#jpwNext,
+#jpwPrevious,
+#jpwFinish {
+  cursor: pointer;
+  font-family: '幼圆';
+  color: #B7F6FD;
+  font-size: 18px;
+}
+#jpwNext:hover,#jpwPrevious:hover,#jpwFinish:hover {
+  color: #fff;
+}
+#jpwOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#jpwOverlay.transparent {
+  background: none;
+}
+#jpWalkthrough.jpw-scrolling .overlay-hole > div {
+  box-shadow: inset 0 0 10px 1000px rgba(0, 0, 0, 0.6);
+}
+#jpWalkthrough .overlay-hole > div {
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+#jpWalkthrough #jpwTooltip {
+  overflow: visible;
+  padding: 10px;
+  background: rgba(69, 166, 181, 0.3);
+  border: 10px solid rgba(169, 248, 253, 0.6);
+  border-radius: 50px;
+}
+#jpWalkthrough #jpwTooltip #tooltipWrapper {
+  overflow: visible;
+}
+#jpWalkthrough #jpwTooltip .top {
+  background: url("../images/leader/arrow-bottom.png") no-repeat scroll 0 0 transparent;
+  bottom: -90px;
+  height: 90px;
+  left: 130px;
+  position: absolute;
+  width: 75px;
+  display: block;
+  z-index: 1000;
+}
+#jpWalkthrough #jpwTooltip .bottom {
+  background: url("../images/leader/arrow-top.png") no-repeat scroll 0 0 transparent;
+  height: 86px;
+  left: 130px;
+  position: absolute;
+  top: -86px;
+  width: 75px;
+  display: block;
+  z-index: 1000;
+}
+#jpWalkthrough #jpwTooltip .left {
+  background: url("../images/leader/arrow-right.png") no-repeat scroll 0 0 transparent;
+  height: 56px;
+  position: absolute;
+  right: -105px;
+  top: 35px;
+  width: 105px;
+  display: block;
+  z-index: 1000;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner {
+  font-family: '幼圆';
+  color: #B7F6FD;
+  text-align: center;
+  font-size: 20px;
+  line-height:30px;
+}
+#jpWalkthrough .killOverlay {
+  background-image: none !important;
+  background-color: none !important;
+}
+#jpwClose {
+  position: fixed;
+  top: 70px;
+  right: 100px;
+  z-index: 1000000;
+  width: 50px;
+}
+#jpwClose:before {
+  content: '';
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 44px;
+  height: 40px;
+  background: url("../images/leader/close.png") no-repeat;
+}
+#jpwNext,
+#jpwFinish {
+  float: right;
+  margin-right: 10px;
+}
+#jpwPrevious {
+  float: left;
+  margin-left: 10px;
+}
+/*引导样式-end*/
+
+
+/*旅游攻略详情页样式-start*/
+.gl-detail{color: #015763;margin-bottom: 20px;}
+.gl-info{margin-top: 10px;text-align: center;}
+.gl-info-author{margin-left: 20%;}
+.gl-info i{font-style: normal;}
+.gl-divider{margin-top: 10px;margin-bottom: 10px;border-top:1px solid rgba(1, 87, 99, 0.5);}
+.gl-content p {text-indent: 2em;}
+.gl-content figure{text-align: center;}
+.gl-content img{margin-bottom: 10px; width: 650px; height: 442px;}
+.glyphicon-thumbs-up{margin-left: 3px;}
+
+/*旅游攻略详情页样式-end*/
+
+/*景点详情页样式-start*/
+.jdxq-img{
+	width: 100%;
+	border: 10px solid #0C8292;
+	border-radius: 5px;
+}
+.jdxq-img img{
+	width: 100%;
+	height: 350px;
+}
+.jdxq-text p{
+	text-indent: 2em;
+	line-height: 25px;
+	color: #015763;
+}
+.more-img{
+	width: 104%;
+	margin-bottom: 30px;
+	padding: 0 10px;
+}
+.more-img img{
+	border: 5px solid #0C8292;
+	border-radius: 5px;
+	width: 19%;
+	height: 155px;
+}
+/*景点详情页样式-end*/
+
+
+/*关于我们样式-start*/
+.width25{width: 25%;}
+.width50{width: 50%;}
+.width75{width: 75%;}
+.aboutus-margin{margin: 20px 0;}
+.aboutus-tabs > li > a {font-size: 16px;background: #83BDC3;color: #555;border-radius: 0;}
+.aboutus-tabs > li > a:hover {background: #83BDC3;color: #015763;}
+.aboutus-tabs > li.active > a,
+.aboutus-tabs > li.active > a:hover,
+.aboutus-tabs > li.active > a:focus {
+	color: #015763;
+	background: #C1D5D8;
+	border-left: 3px solid #298B98;
+}
+.aboutus-content{background: #C1D5D8;min-height: 460px; padding-left: 15px;margin-left: -15px;}
+.tabpanel-title{font-size: 16px; line-height: 45px; color: #015763; border-bottom: 1px solid #298B98;}
+/*关于我们样式-end*/
+
+
+/*登录注册样式-start*/
+.modal-dialog {width: 360px;margin: 100px auto;}
+.modal-content {background: #e9ecf1;}
+.close{font-size: 31px;}
+.modal-header {padding: 8px 15px;}
+.login-content .form-control{height: 42px; padding: 10px 12px;}
+.login-content .checkbox{margin-top: -5px;margin-bottom: 5px;}
+.login-content .btn{padding: 10px 12px; width: 100%;}
+/*登录注册样式-end*/
+
+/*个人资料样式-start*/
+.grzl-wrap {margin-top: 10px;line-height: 40px; color: #015763;}
+.label-left {float: left;width: 100px;text-align: right;line-height: 40px;}
+.grzl-group {margin-left: 110px;}
+.grzl-group label{ font-weight: normal; margin-right: 20px;}
+.grzl-group textarea {line-height: 20px; background: #e9ecf1; border-color: #298B98; border-radius: 4px; padding: 7px 10px;}
+.grzl-input {border: 1px solid #298B98; background: #e9ecf1; border-radius: 4px;width: 389px;height: 35px;line-height: 24px;padding: 7px 10px;}
+.profile-btn{width: 389px; padding: 7px 15px; font-size: 16px; background: #83BDC3;}
+.profile-btn:hover{background: #68ACB3;}
+/*个人资料样式-start*/
+
+/*关于亳州样式-start*/
+.onepage-wrapper {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+.onepage-pagination {
+  position: absolute;
+  right: 15px;
+  top: 40%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgb(179, 219, 224);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  /*box-shadow: 1px 1px 10px 0px #f00;*/
+}
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid #04D9F7;
+  margin-top: -4px;
+  left: 8px;
+}
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {overflow: auto;}
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%;
+}
+.disabled-onepage-scroll .onepage-pagination {display: none;}
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper {position: inherit;}
+
+.onepage-con{
+	position: relative;
+	width: 100%;
+	height: 501px;
+	-webkit-font-smoothing: antialiased;
+}
+.wrapper {
+	height: 501px;
+	overflow: hidden;
+}
+.page_container{
+	width: 1140px;
+	margin: 0 auto;
+	padding: 15px;
+	color: #fff;
+}
+.page_container .text-con{padding: 10px 30px;}
+.page_container p{
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 25px;
+}
+.fl{float: left;}
+.fr{float: right;}
+.img-con{
+	margin: -50px 20px 0 20px;
+	width: 220px;
+}
+.img-con img{
+	width: 215px;
+	margin: 5px;
+}
+section  {overflow: hidden;}
+.section1 {background: #8f5589;}
+.section2 {background: #008ea1;}
+.section3 {background: #56bcaa;}
+.section4 {background: #ab4e41;}
+.section5 {background: #613a8b;}
+/*关于亳州样式-end*/
+
+
+
+/*旅游社区样式-start*/
+.h3-left{color: #015763;font-size: 22px;}
+/*旅游社区左侧图片切换样式-start*/
+.slider-maxSize{width: 100%;}
+.slider-container{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 540px;
+	height: 335px;
+	overflow: hidden;
+}
+.slider-content{
+	cursor: move;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 540px;
+	height: 335px;
+	overflow: hidden;
+}
+.thumbNav{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height:30px;
+	width:540px;
+}
+.slides-prototype{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 540px;
+	height: 30px;
+}
+.thumbnailtemplate{
+	font-family: verdana;
+	font-weight: normal;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color:#fff;
+  text-shadow: 0 0 1px rgba(13,110,123,.5);
+	line-height: 25px;
+	font-size:20px;
+	padding-left:20px;
+}
+
+.arrowleft, .arrowright {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../images/a17.png) no-repeat;
+    overflow: hidden;
+}
+.arrowleft {top: 123px; left: 8px; background-position: -10px -40px; }
+.arrowright {top: 123px; right: 8px; background-position: -70px -40px; }
+.arrowleft:hover { background-position: -130px -40px; }
+.arrowright:hover { background-position: -190px -40px; }
+.arrowleft.jssora05ldn { background-position: -250px -40px; }
+.arrowright.jssora05rdn { background-position: -310px -40px; }
+
+.slider-navigator {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.slider-navigator span, .slider-navigator span:hover, .slider-navigator .av {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #015763;
+}
+.slider-navigator span { background-color: #84C3CC; }
+.slider-navigator span:hover, .slider-navigator .av:hover { background-color: #fff; }
+.slider-navigator .av { background-color: #015763; }
+.slider-navigator .dn, .slider-navigator .dn:hover { background-color: #015763; }
+
+/*旅游社区左侧图片切换样式-end*/
+
+/*旅游社区右侧滚动新闻样式-start*/
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid #328590;
+	border-radius: 12px 12px 8px 8px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.panel-bz .panel-heading{
+	background-image: linear-gradient(to bottom,#77B7BF 0,#026775 100%);
+	background-repeat: repeat-x;
+	color: #B9DEE2;
+	padding: 10px 15px;
+  	border-bottom: 1px solid #9FCAD0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.panel-bz .panel-body {
+	padding: 5px 15px;
+	background: rgba(1, 87, 99, 0.4);
+}
+.panel-bz .panel-footer {
+	padding: 7px 15px;
+	background-color: #4D9DA7;
+	border-top: 1px solid #9FCAD0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.pagination > li > a, .pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 5px 10px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #015763;
+  text-decoration: none;
+  background-color: #99BCC0;
+  border: 1px solid #177683;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  z-index: 3;
+  background-color: #C4DFE2;
+  border-color: #177683;
+}
+.panel ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+.news-item {
+  padding: 4px 0px;
+  margin: 0px;
+  border-bottom: 1px dotted #015763;
+}
+/*旅游社区右侧滚动新闻样式-end*/
+
+/*旅游社区旅游攻略样式-start*/
+.gl-list {
+	margin: 0;
+	padding: 0;
+	color: #015763;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.gl-list a {text-decoration: none;cursor: pointer;}
+.gl-list a:hover {color: #288996;}
+.gl-item {margin-top: 10px;}
+.gl-item:hover {background: #DFEBEC;}
+.gl-image {
+  float: left;
+  width: 220px;
+  height: 135px;
+  overflow: hidden;
+}
+.gl-image img {width: 220px;height: 135px;}
+.gl-wrapper {
+  float: left;
+  margin-left: 10px;
+  width: 600px;
+  height: 150px;
+  overflow: hidden;
+}
+.gl-item dl {
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+.gl-item dt {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.gl-item dt a {
+	position: relative;
+	width: 540px;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.gl-item dd {
+  height: 60px;
+  line-height: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.gl-extra {
+  overflow: hidden;
+  line-height: 25px;
+  margin-top: 15px;
+}
+.gl-extra span {display: inline-block;}
+.gl-extra .gl-like {float: right;}
+.gl-extra .gl-place {margin-right: 5px;}
+.gl-extra .gl-user {margin-right: 10px;}
+.gl-extra .gl-user img {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+  vertical-align: -3px;
+}
+.fenye{text-align: center;}
+.pagination {margin: 0 0 20px 0;}
+.pagination > .active > a {
+  z-index: 3;
+  background-color: #015763;
+  border-color: #015763;
+}
+.icon-new {
+	position: absolute;
+	top: -2px;
+	width: 25px;
+	height: 25px;
+	background: url(../images/new.png) no-repeat;
+	background-size: 25px 25px;
+}
+.icon-hot {
+	position: absolute;
+	top: -2px;
+	width: 22px;
+	height: 14px;
+	background: url(../images/hot.gif) no-repeat;
+	background-size: 22px 14px;
+}
+
+.h4-center{text-align: center; color: #015763;}
+.gl-hot{
+	position: relative;
+	list-style-type: decimal;
+	margin-left: -10px;
+	color: #015763;
+}
+.gl-hot li{line-height: 20px;}
+.gl-hot li a:hover{color: #288996;text-decoration: none;}
+/*旅游社区旅游攻略样式-end*/
+
+/*旅游社区样式-end*/
+
+/*页脚样式-start*/
+.footer-bz{
+	height: 90px;
+	background: #015763;
+	border-color: #e7e7e7;
+	font-size: 16px;
+	color: #b3dbe0;
+}
+.footer-left{
+	width: 80%;
+	float: left;
+}
+.footer-right{
+	width: 20%;
+	float: right;
+}
+.footer-right img{float: right;}
+.footer-con{
+	margin: 15px 0;
+	height: 20px;
+}
+.footer-con li{
+	float: left;
+	width: 14%;
+	text-align: center;
+	list-style-type: none;
+}
+.footer-con li a{cursor: pointer;}
+.footer-con li a:hover{
+	color:#fff;
+	text-decoration: none;
+}
+.line-cz{
+	width: 2px;
+	height: 20px;
+	top: 14px;
+	background: #b3dbe0;
+	margin: 0 auto;
+}
+.copy-footer{
+	margin-top: 25px;
+	font-family: Arial;
+	text-align: center;
+}
+@media screen and (max-width: 765px) {.footer-con li{width: 12%;}.footer-right img{width: 140px;}.footer-left{width: 90%;}.footer-right{width: 10%;}}
+@media screen and (max-width: 685px) {.footer-con li{font-size: 14px;}.copy-footer{font-size: 14px;}.footer-right img{width: 120px;}}
+@media screen and (max-width: 610px) {.footer-con li{font-size: 12px;}.footer-right img{width: 90px;}}
+/*页脚样式-end*/
+
+
+/*导航条样式-start*/
+.navbar {margin-bottom: -1px;}
+.navbar-bz {
+  background-color: #015763;
+  border-color: #e7e7e7;
+  font-size: 16px;
+}
+.navbar-bz .navbar-brand {
+  color: #b3dbe0;
+  font-size: 21px;
+}
+.navbar-bz .navbar-brand:hover,
+.navbar-bz .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-bz .navbar-text {
+  color: #777;
+}
+.navbar-bz .navbar-nav > li > a {
+  color: #b3dbe0;
+}
+.navbar-bz .navbar-nav > li > a:hover,
+.navbar-bz .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-bz .navbar-nav > .active > a,
+.navbar-bz .navbar-nav > .active > a:hover,
+.navbar-bz .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #007b8b;
+}
+.navbar-bz .navbar-nav > .disabled > a,
+.navbar-bz .navbar-nav > .disabled > a:hover,
+.navbar-bz .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-bz .navbar-toggle {
+  border-color: #B3DBE0;
+}
+.navbar-bz .navbar-toggle .icon-bar {
+  background-color: #B3DBE0;
+}
+.navbar-bz .navbar-collapse,
+.navbar-bz .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-bz .navbar-nav > .open > a,
+.navbar-bz .navbar-nav > .open > a:hover,
+.navbar-bz .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #015763;
+}
+@media screen and (max-width: 880px) {
+  .navbar-form{display: none;}
+
+}
+@media (max-width: 767px) {
+  .navbar-bz .navbar-nav .open .dropdown-menu > li > a {color: #b3dbe0;}
+  .navbar-bz .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-bz .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  .navbar-bz .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-bz .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-bz .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #015763;
+  }
+  .navbar-bz .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-bz .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-bz .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+  .line-cz{display: none !important;}
+}
+
+/*搜索框样式-start*/
+.navbar-form{position: relative;}
+.navbar-form .form-control{border-radius: 17px;background: #E9ECF1;}
+.searchBtn{
+	position: absolute;
+	top: 24%;
+	right: 12%;
+	font-size: 18px;
+	color: #B7B4B4;
+	cursor: pointer;
+}
+.searchBtn:hover{color:#257682;}
+@media screen and (max-width: 1024px) {.navbar-form input{width: 150px;}}
+/*搜索框样式-end*/
+
+/*下拉菜单样式-start*/
+.dropdown-menu {
+  background-color: #015763;
+  border: 1px solid #257682;
+}
+.dropdown-menu .divider {
+  background-color: #51ADBB;
+}
+.dropdown-menu > li > a {
+    color: #b3dbe0;
+  }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #015763;
+}
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #015763;
+}
+/*下拉菜单样式-end*/
+/*导航条样式-end*/
+
+/*首页-热门景点样式-start*/
+.h3-title{
+	color: #015763;
+	margin-top: 30px;
+	text-align: center;
+	position: relative;
+}
+.jingdian-hot{
+	width: 100%;
+	border: 5px solid #0C8292;
+	border-radius: 5px;
+	background: #0C8292;
+	margin: 10px 0;
+	overflow: hidden;
+}
+.jingdian-hot img{
+	width: 100%;
+	height: 190px;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+.jingdian-hot .caption {
+	padding: 3px 0 0 3px;
+  	color: #B3DBE0;
+}
+.jingdian-hot .caption a{
+	line-height: inherit;
+	display: inline-block;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+.jingdian-hot .caption-zuobiao{
+	float: right;
+	cursor: pointer;
+}
+.jingdian-hot:hover img{
+	-webkit-transform: scale(1.1) translateY(-5%);
+	-moz-transform: scale(1.1) translateY(-5%);
+	-ms-transform: scale(1.1) translateY(-5%);
+	transform: scale(1.1) translateY(-5%);
+}
+.jingdian-hot a:hover,
+.jingdian-hot .caption-zuobiao:hover {
+	color: #fff;
+}
+/*首页-热门景点样式-end*/
+
+
+/*首页-关于亳州样式-start*/
+.bz-margin1{margin: 103px 20%;}
+.bz-margin2{margin: 109px 5% 125px 5%;}
+.hexagon {
+    width: 320px;
+    height: 186px;
+    color: #e9ecf1;
+    position: relative;
+    float: left;
+    margin:0 10px;
+}
+.hexagon:before {
+    content: "";
+    position: absolute;
+    top: -92px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+}
+.hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -92px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+}
+.hexagon1 {background: #008ea1;color: #00414A;}
+.hexagon1:before {border-bottom: 93px solid #008ea1;}
+.hexagon1:after {border-top: 93px solid #008ea1;}
+.hexagon2 {background: #56bcaa;color: #036150;}
+.hexagon2:before {border-bottom: 93px solid #56bcaa;}
+.hexagon2:after {border-top: 93px solid #56bcaa;}
+.hexagon3 {background: #ab4e41;color: #520F06;}
+.hexagon3:before {border-bottom: 93px solid #ab4e41;}
+.hexagon3:after {border-top: 93px solid #ab4e41;}
+.hexagon4 {background: #8f5589;color: #44023D;}
+.hexagon4:before {border-bottom: 93px solid #8f5589;}
+.hexagon4:after {border-top: 93px solid #8f5589;}
+.hexagon5 {background: #613a8b;color: #210144;}
+.hexagon5:before {border-bottom: 93px solid #613a8b;}
+.hexagon5:after {border-top: 93px solid #613a8b;}
+.hexagon-img{
+	border: 1px solid transparent;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: -22%;
+	left: 16%;
+	width: 220px;
+	height: 220px;
+}
+.hexagon img{
+	width:220px;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+.hexagon-img img:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.hexagon figcaption{
+	position: absolute;
+	bottom: -15%;
+	left: 37%;
+	cursor: pointer;
+	z-index: 10;
+	font-size: 22px;
+}
+.hexagon figcaption:hover {color: #fff;}
+@media screen and (max-width: 1200px) {
+	.bz-margin1{margin: 80px 24%;}
+	.bz-margin2{margin: 80px 0% 100px 11%;}
+    .hexagon {width: 220px; height: 128px;}
+    .hexagon:before {top: -64px;border-left: 110px solid transparent;border-right: 110px solid transparent;}
+    .hexagon:after {bottom: -64px;border-left: 110px solid transparent;border-right: 110px solid transparent;}
+	.hexagon1:before {border-bottom: 64px solid #008ea1;}
+	.hexagon1:after {border-top: 64px solid #008ea1;}
+	.hexagon2:before {border-bottom: 64px solid #56bcaa;}
+	.hexagon2:after {border-top: 64px solid #56bcaa;}
+	.hexagon3:before {border-bottom: 64px solid #ab4e41;}
+	.hexagon3:after {border-top: 64px solid #ab4e41;}
+	.hexagon4:before {border-bottom: 64px solid #8f5589;}
+	.hexagon4:after {border-top: 64px solid #8f5589;}
+	.hexagon5:before {border-bottom: 64px solid #613a8b;}
+	.hexagon5:after {border-top: 64px solid #613a8b;}
+	.hexagon-img{width: 150px;height: 150px;}
+	.hexagon img{width:150px;}
+	.hexagon figcaption{left: 32%;font-size: 20px;}
+}
+@media screen and (max-width: 993px) {
+	.bz-margin1{margin: 80px 16%;}
+	.bz-margin2{margin: 80px 0% 100px -1%;}
+}
+@media screen and (max-width: 760px) {
+	.bz-margin1{margin: 55px 24%;}
+	.bz-margin2{margin: 55px 0% 70px 11%;}
+    .hexagon {width: 150px; height: 88px;}
+    .hexagon:before {top: -44px;border-left: 75px solid transparent;border-right: 75px solid transparent;}
+    .hexagon:after {bottom: -44px;border-left: 75px solid transparent;border-right: 75px solid transparent;}
+	.hexagon1:before {border-bottom: 44px solid #008ea1;}
+	.hexagon1:after {border-top: 44px solid #008ea1;}
+	.hexagon2:before {border-bottom: 44px solid #56bcaa;}
+	.hexagon2:after {border-top: 44px solid #56bcaa;}
+	.hexagon3:before {border-bottom: 44px solid #ab4e41;}
+	.hexagon3:after {border-top: 44px solid #ab4e41;}
+	.hexagon4:before {border-bottom: 44px solid #8f5589;}
+	.hexagon4:after {border-top: 44px solid #8f5589;}
+	.hexagon5:before {border-bottom: 44px solid #613a8b;}
+	.hexagon5:after {border-top: 44px solid #613a8b;}
+	.hexagon-img{width: 100px;height: 100px;}
+	.hexagon img{width:100px;}
+	.hexagon figcaption{left: 28%;font-size: 16px;}
+}
+@media screen and (max-width: 703px) {.bz-margin1{margin: 55px 21%;}.bz-margin2{margin: 55px 0% 70px 7%;}}
+@media screen and (max-width: 635px) {.bz-margin1{margin: 55px 22%;}.bz-margin2{margin: 55px 0% 70px 8%;}.hexagon {margin:0 5px;}}
+@media screen and (max-width: 620px) {.bz-margin1{margin: 55px 20%;}.bz-margin2{margin: 55px 0% 70px 6%;}}
+@media screen and (max-width: 580px) {.bz-margin1{margin: 55px 16%;}.bz-margin2{margin: 55px 0% 70px 0%;}.hexagon figcaption{left: 32%;font-size: 14px;}}
+@media screen and (max-width: 527px) {.bz-margin1{margin: 55px 31%;}.bz-margin2{margin: 55px 31%;}.hexagon2 {margin-top: 90px;}.hexagon3 {margin-top: 35px;}.hexagon4 {margin-top: 90px;}.hexagon5 {margin-top: 90px;}}
+/*首页-关于亳州样式-end*/
+
+
+/*首页-旅游社区样式-start*/
+.sq-padding{padding: 0 60px;}
+.circle-zx{
+	border: 15px solid #008ea1;
+	background: #96cdd4;
+	color: #09616D;
+}
+.circle-gl{
+	border: 15px solid #56bcaa;
+	background: #b3ddd6;
+	color: #097965;
+}
+.circle-bz{
+	border-radius: 50%;
+	margin: 0 20px 20px;
+	padding: 50px;
+	height: 455px;
+}
+.sq-title{
+	text-align: center;
+	font-size: 22px;
+}
+.sq-line{
+	width: 90%;
+	margin: 5px 5%;
+	height: 2px;
+	background: #008ea1;
+}
+.gl-line{background: #56BCAA;}
+.sq-content{
+	list-style-type: decimal;
+	margin-left: -24px;
+}
+.sq-content li{line-height: 26px;}
+.sq-li{
+	width: 230px;
+	height: 20px;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.sq-li a{color: #fff;}
+.sq-li a:link,.sq-li a:visited,.sq-li a:focus,.sq-li a.active{color: #fff;}
+.sq-time{
+	float: right;
+	font-size: 13px;
+}
+.sq-more{
+	text-align: center;
+	font-size: 18px;
+	display: block;
+}
+@media screen and (max-width: 1200px) {.sq-padding{padding: 0;}.circle-bz{margin: 0 1px 20px;}}
+@media screen and (max-width: 991px) {.circle-bz{padding: 110px;height: 600px;}}
+@media screen and (max-width: 660px) {.circle-bz{padding: 80px;height: 500px;}}
+@media screen and (max-width: 552px) {.circle-bz{padding: 40px;height: 450px;}}
+@media screen and (max-width: 470px) {.circle-bz{height: 400px;}.sq-content{display: none;}}
+/*首页-旅游社区样式-end*/
